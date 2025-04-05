@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import 'https://cdn.jsdelivr.net/gh/KunalTanwar/tailwind-colors/dist/css/colors.min.css';
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color:white;
+}
+
+:root{
+  --primary-color: #232830;
+  --netural-900:oklch(20.5% 0 0);
+  --zinc-600:oklch(44.2% 0.017 285.786);
+  --zinc-500:oklch(55.2% 0.016 285.938);
+}
+
+body{
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+
+.calculator{
+  background-color: var(--netural-900);
+  padding: 4rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 12px 5px rgba(0, 0, 0, 0.383);
+}
+
+.calc-screen{
+  height:7rem
+}
+
+.display{
+  font-size: 4rem;
+  text-align: right;
+  font-weight: 600;
+}
+
+button{
+  width:100px;
+  height:100px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: var(--zinc-600);
+  margin: 1px 0;
+  transition: all ease 0.15s;
+}
+
+button:hover{
+  background-color: var(--zinc-500);
+}
+
+.clear-btn{
+  width:12.8rem;
+}
+
+.zero-btn{
+  width:19.3rem;
+}
