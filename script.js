@@ -1,21 +1,20 @@
 const display = document.querySelector('.display');
 let calculated = false;
 
-function clearDisplay(){
+function clearDisplay() {
   display.textContent = '';
   calculated = false;
 }
 
-function appendToDisplay(input){
-  if(calculated){
+function appendToDisplay(input) {
+  if (calculated) {
     display.textContent = '';
     calculated = false;
   }
   display.textContent += input;
-  
 }
 
-function calculateOperator(op){
+function calculateOperator(op) {
   let lastChar = display.textContent.slice(-1);
   if (!['+', '-', '*', '/'].includes(lastChar)) {
     display.textContent += op;
@@ -23,17 +22,16 @@ function calculateOperator(op){
   }
 }
 
-function calculate(){ 
-  try{
+function calculate() {
+  try {
     display.textContent = eval(display.textContent);
     calculated = true;
-  }
-  catch(err){
+  } catch (err) {
     display.textContent = 'Error';
-    calculated=false;
+    calculated = false;
   }
 }
 
-function deleteDisplay(){
-  display.textContent = display.textContent.slice(0,-1);
+function deleteDisplay() {
+  display.textContent = display.textContent.slice(0, -1);
 }
