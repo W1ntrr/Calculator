@@ -35,3 +35,5 @@ function calculate() {
 function deleteDisplay() {
   display.textContent = display.textContent.slice(0, -1);
 }
+
+console.log('ssh');
